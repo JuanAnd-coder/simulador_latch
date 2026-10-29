@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio de cronogramas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">⎍</span>
+      <div>
+        <h1>Laboratorio de cronogramas</h1>
+        <p>Electrónica digital · compuertas y latch S-R</p>
+      </div>
+    </div>
+    <div class="tools">
+      <nav class="tabs">
+        <button id="tab-comb" class="active">Combinacional</button>
+        <button id="tab-seq">Secuencial</button>
+      </nav>
+      <button id="theme" class="icon" aria-label="Cambiar tema">◐</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" id="controls"></section>
+
+    <section class="card">
+      <h2 id="timing-title">Cronograma</h2>
+      <div id="timing"></div>
+      <div class="player">
+        <button id="first" aria-label="Inicio">⏮</button>
+        <button id="play" class="primary" aria-label="Reproducir">▶</button>
+        <button id="last" aria-label="Final">⏭</button>
+        <input type="range" id="slider" min="0" value="0">
+        <b id="t-label">t = 0</b>
+        <select id="speed" aria-label="Velocidad">
+          <option value="1200">Lento</option>
+          <option value="700" selected>Normal</option>
+          <option value="300">Rápido</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="grid" id="panels"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
